@@ -22,4 +22,21 @@ Developed a full-stack Recipe Website that allows users to register and log in s
 - **Storage**: SQL database for user and recipe data
 
 ## 📁 Project Structure
+Recipe-Website/
+├── public/
+│ └── index.html
+├── css/
+│ └── style.css
+├── js/
+│ └── script.js
+├── routes/
+│ └── auth.js
+│ └── recipes.js
+├── views/
+│ └── login.html
+│ └── register.html
+│ └── dashboard.html
+├── server.js
+├── db.js
+└── .env
 
