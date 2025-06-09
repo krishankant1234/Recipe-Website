@@ -12,10 +12,11 @@ const PORT = 3000;
 
 // MySQL DB connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Kris8860051565$$$", // Your password
-  database: "recipe_app",
+  host: "bygzdp9wp5ivdxxinzmo-mysql.services.clever-cloud.com",
+  user: "uxgdwexplfdhkdqu",
+  password: "uxgdwexplfdhkdqu", // Your password
+  database: "bygzdp9wp5ivdxxinzmo",
+  port:3306,
 });
 
 db.connect((err) => {
