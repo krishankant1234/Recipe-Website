@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #00695c;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #c8e6c9, #e0f7fa);
+}
+
+.hero-logo {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form .input-group {
+  margin-bottom: 1rem;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  padding: 0.6rem 1.2rem;
+  background-color: #00897b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button.clear {
+  background-color: #e53935;
+}
+
+/* Recipe Cards */
+.card-container,
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.recipe-card {
+  background: #ffffff;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card h3 {
+  margin-bottom: 0.5rem;
+  color: #00796b;
+}
+
+.recipe-card ul,
+.recipe-card ol {
+  padding-left: 1.2rem;
+}
+
+.recipe-card .card-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.view-btn,
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #00796b;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.card-details {
+  display: none;
+  margin-top: 0.8rem;
+}
+
+.card-details.visible {
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #004d40;
+  color: white;
+  margin-top: 2rem;
+}
+
+
+.recipe-card .card-details {
+  display: none;
+  margin-top: 0.8rem;
+}
+
+.recipe-card .card-details.visible {
+  display: block;
+}
+
+#user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#user-circle {
+  width: 36px;
+  height: 36px;
+  background-color: #667eea;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: default;
+}
+
+#logout-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#logout-link:hover {
+  text-decoration: underline;
+}
+
+/* style.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.auth-bg {
+  /* subtle gradient background */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  color: #4b4b7d;
+  font-weight: 700;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+.button {
+  padding: 0.8rem 1rem;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #5a6cd8;
+}
+
+.auth-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-container a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 400px) {
+  .auth-container {
+    width: 90%;
+    padding: 1.5rem 2rem;
+  }
+}

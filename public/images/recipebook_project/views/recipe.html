@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">🍲 RecipeBook</div>
+      <div class="nav-right" id="nav-right">
+        <a href="/login.html">Login</a>
+        <a href="/signup.html">Signup</a>
+      </div>
+    </nav>
+    <section class="recipe-list"></section>
+    <script src="/script.js">
+      // Check login state and modify nav
+      const navRight = document.getElementById('nav-right');
+      const user = JSON.parse(localStorage.getItem('user'));
+
+      if (user) {
+        navRight.innerHTML = `
+          <div class="user-circle">${user.username.charAt(0).toUpperCase()}</div>
+          <button class="logout-btn" onclick="logout()">Logout</button>
+        `;
+      }
+
+      function logout() {
+        localStorage.removeItem('user');
+        window.location.href = '/login.html';
+      }
+
+      // Fetch and display recipes
+      fetch('/recipes')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('recipe-list');
+          if (data.length === 0) {
+            container.innerHTML = "<p>No recipes found.</p>";
+          } else {
+            data.forEach(recipe => {
+              const card = document.createElement('div');
+              card.className = 'recipe-card';
+              card.innerHTML = `
+                <h3>${recipe.title}</h3>
+                <p>${recipe.description}</p>
+                <button class="view-btn">View</button>
+              `;
+              container.appendChild(card);
+            });
+          }
+        });
+    </script>
+  </body>
+</html>
